@@ -12,7 +12,9 @@ body {
   box-sizing: border-box;
 }
 
-/* variables */
+/* --------------------------
+   Variables
+--------------------------- */
 :root {
   --creamy-white: #f6f0eb;
   --warm-beige: #e8dcc8;
@@ -22,8 +24,9 @@ body {
   --dusty-green: #a7c5ab;
 }
 
-/* GLOBAL STYLES */
-/* navbar */
+/* --------------------------
+   NAVBAR
+--------------------------- */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -54,6 +57,9 @@ body {
   color: var(--milk-chocolate);
 }
 
+/* --------------------------
+   UNIVERSAL BUTTON / LINKS
+--------------------------- */
 .book-button {
   display: inline-block;
   text-decoration: none;
@@ -75,7 +81,27 @@ body {
   transform: scale(1.04);
 }
 
-/* footer */
+.adopt-button {
+  background-color: var(--deep-espresso);
+  color: var(--creamy-white);
+  padding: 10px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out, transform 0.2s;
+}
+
+.adopt-button:hover {
+  background-color: var(--dusty-green);
+  transform: scale(1.04);
+}
+
+/* --------------------------
+   FOOTER
+--------------------------- */
 .footer {
   background-color: var(--dark-mocha);
   color: white;
@@ -133,7 +159,9 @@ body {
   transform: scale(1.1);
 }
 
-/* HOME PAGE */
+/* --------------------------
+   HOME PAGE (index.html)
+--------------------------- */
 .hero {
   background: url('assets/images/hero.jpg') no-repeat center center/cover;
   height: 715px;
@@ -174,7 +202,9 @@ body {
   margin-bottom: 1.5rem;
 }
 
-/* ABOUT PAGE */
+/* --------------------------
+   ABOUT PAGE (about.html)
+--------------------------- */
 .about {
   padding: 4rem 2rem;
   text-align: center;
@@ -220,7 +250,9 @@ body {
   display: inline-block;
 }
 
-/* VOLUNTEER PAGE */
+/* --------------------------
+   VOLUNTEER PAGE (volunteer.html)
+--------------------------- */
 .volunteer {
   padding: 4rem 2rem;
   text-align: center;
@@ -261,7 +293,9 @@ body {
   margin-bottom: 1.5rem;
 }
 
-/* BOOKING PAGE */
+/* --------------------------
+   BOOK PAGE (book.html)
+--------------------------- */
 .book {
   padding: 1rem 1rem;
   max-width: 1550px;
@@ -277,7 +311,7 @@ body {
 
 .rules {
   width: 50%;
-  background-color: white;
+  background-color: #fff;
   padding: 1rem;
   text-align: center;
 }
@@ -350,7 +384,9 @@ body {
   transform: scale(1.04);
 }
 
-/* BOOKING CONFIRMATION PAGE */
+/* --------------------------
+   CONFIRMATION PAGE (confirmation.html)
+--------------------------- */
 .confirmation-wrapper {
   display: flex;
   flex-direction: column;
@@ -400,7 +436,9 @@ body {
   margin-bottom: 0.5rem;
 }
 
-/* ADOPTION PAGE */
+/* --------------------------
+   ADOPTION PAGE (adopt.html)
+--------------------------- */
 .adopt {
   padding: 4rem 2rem;
   max-width: 1400px;
@@ -462,25 +500,9 @@ body {
   margin-bottom: 1rem;
 }
 
-.adopt-button {
-  background-color: var(--deep-espresso);
-  color: white;
-  padding: 10px 30px;
-  font-size: 16px;
-  font-weight: 600;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background-color 0.3s ease-in-out, transform 0.2s;
-}
-
-.adopt-button:hover {
-  background-color: var(--dusty-green);
-  transform: scale(1.04);
-}
-
-/* LOCATION PAGE */
+/* --------------------------
+   LOCATION PAGE (location.html)
+--------------------------- */
 .location {
   padding: 4rem 2rem;
   max-width: 1400px;
@@ -524,7 +546,9 @@ body {
   border: none;
 }
 
-/* ADOPTION FORM PAGE */
+/* --------------------------
+   ADOPTION FORM PAGE (form.html)
+--------------------------- */
 .adoption-form {
   padding: 4rem 2rem;
   max-width: 1200px;
@@ -595,7 +619,9 @@ body {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out, transform 0.2s, box-shadow 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, 
+              transform 0.2s, 
+              box-shadow 0.3s ease-in-out;
 }
 
 .book-button:hover {
