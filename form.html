@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Adoption Form </title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">lucky cat café</div>
+    <nav class="nav-links">
+      <a href="index.html">home</a>
+      <a href="about.html">about</a>
+      <a href="book.html">book</a>
+      <a href="adopt.html">adopt</a>
+      <a href="volunteer.html">volunteer</a>
+      <a href="location.html">location</a>
+    </nav>
+  </header>
+
+  <section class="adoption-form">
+    <div class="adoption-form-container">
+      <h1>adoption application</h1>
+      <p>
+        Thank you for your interest in adopting one of our friendly felines! Fill out the form below,
+        and we’ll be in touch soon to discuss next steps.
+      </p>
+
+      <form id="adoptionForm">
+        <div class="form-group">
+          <label for="fullName">Full Name:</label>
+          <input 
+            type="text" 
+            id="fullName" 
+            name="fullName" 
+            placeholder="e.g. Jane Doe"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address:</label>
+          <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            placeholder="you@domain.com"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="phoneNumber">Phone Number:</label>
+          <input 
+            type="tel" 
+            id="phoneNumber" 
+            name="phoneNumber" 
+            placeholder="(123) 456-7890"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="catChoice">Which cat are you interested in adopting?</label>
+          <select id="catChoice" name="catChoice" required>
+            <option value="">-- Select a cat --</option>
+            <option value="winston">Winston</option>
+            <option value="luna">Luna</option>
+            <option value="mochi">Mochi</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="additionalInfo">Tell us a little about your home, pets, or any special considerations:</label>
+          <textarea 
+            id="additionalInfo" 
+            name="additionalInfo" 
+            rows="5" 
+            placeholder="Share more details here..."
+          ></textarea>
+        </div>
+
+        <button type="submit" class="book-button">submit application</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="footer-section">
+          <h3>address</h3>
+          <p>
+            Lucky Cat Café<br/>
+            123 Purr Street<br/>
+            Ottawa, ON K1A 0B1
+          </p>
+        </div>
+        <div class="footer-section">
+          <h3>contact</h3>
+          <p>
+            meow@luckycatcafe.ca<br/>
+            (613) 123-4567
+          </p>
+        </div>
+        <div class="footer-section">
+          <h3>hours</h3>
+          <p>
+            Mon-Fri 8AM - 7PM<br/>
+            Sat-Sun 9AM - 5PM
+          </p>
+        </div>
+      </div>
+      <div class="footer-socials">
+        <a href="#"><img src="assets/icons/ig.svg" alt="Instagram" /></a>
+        <a href="#"><img src="assets/icons/fb.svg" alt="Facebook" /></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('adoptionForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you! Your adoption application has been submitted.');
+    });
+  </script>
+</body>
+</html>

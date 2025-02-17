@@ -471,6 +471,7 @@ body {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  text-decoration: none;
   transition: background-color 0.3s ease-in-out, transform 0.2s;
 }
 
@@ -521,4 +522,83 @@ body {
   width: 100%;
   height: 750px;
   border: none;
+}
+
+/* ADOPTION FORM PAGE */
+.adoption-form {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center; 
+}
+
+.adoption-form-container {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.adoption-form-container h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  color: var(--milk-chocolate);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.adoption-form-container p {
+  font-size: 18px;
+  color: var(--deep-espresso);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--deep-espresso);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--milk-chocolate);
+}
+
+.book-button {
+  display: block;
+  margin: 2rem auto 0;
+  text-decoration: none;
+  background-color: var(--deep-espresso);
+  color: var(--creamy-white);
+  padding: 12px 40px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.2s, box-shadow 0.3s ease-in-out;
+}
+
+.book-button:hover {
+  background-color: var(--dusty-green);
+  transform: scale(1.04);
 }
