@@ -607,7 +607,7 @@ body {
 }
 
 .book-button {
-  display: block;
+  display: inline-block;
   margin: 2rem auto 0;
   text-decoration: none;
   background-color: var(--deep-espresso);
