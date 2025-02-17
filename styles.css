@@ -55,6 +55,8 @@ body {
 }
 
 .book-button {
+  display: inline-block;
+  text-decoration: none;
   background-color: var(--deep-espresso);
   color: var(--creamy-white);
   padding: 10px 55px;
@@ -132,7 +134,6 @@ body {
 }
 
 /* HOME PAGE */
-/* hero */
 .hero {
   background: url('assets/images/hero.jpg') no-repeat center center/cover;
   height: 715px;
@@ -151,7 +152,6 @@ body {
   margin: 0;
 }
 
-/* intro */
 .description {
   padding: 3rem 2rem;
   max-width: 900px;
@@ -216,6 +216,309 @@ body {
 }
 
 .about .book-button {
-  margin: 2rem auto 0;
+  margin: 0.5rem auto 0;
+  display: inline-block;
+}
+
+/* VOLUNTEER PAGE */
+.volunteer {
+  padding: 4rem 2rem;
+  text-align: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.volunteer h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  color: var(--milk-chocolate);
+  margin-bottom: 1rem;
+  width: 150%;
+}
+
+.volunteer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.volunteer-container img {
+  width: 50%;
+  border-radius: 2px;
+}
+
+.volunteer-text {
+  width: 50%;
+  text-align: left;
+}
+
+.volunteer-text p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 19px;
+  color: var(--deep-espresso);
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+/* BOOKING PAGE */
+.book {
+  padding: 1rem 1rem;
+  max-width: 1550px;
+  margin: 0 auto;
+}
+
+.book-container {
+  display: flex;
+  gap: 6rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.rules {
+  width: 50%;
+  background-color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.rules h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  color: var(--milk-chocolate);
+  margin-bottom: 1rem;
+}
+
+.rules p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 19px;
+  line-height: 1;
+  color: var(--deep-espresso);
+  margin-bottom: 0.5rem;
+}
+
+.booking-side {
+  width: 50%;
+  padding: 1.5rem;
+  border-radius: 3px;
+}
+
+.booking-form {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 19px;
+  color: var(--deep-espresso);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.booking-form label {
   display: block;
+  width: 100%;
+}
+
+.booking-form input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.booking-form input:focus {
+  outline: none;
+  border-color: var(--milk-chocolate);
+}
+
+.booking-form .book-button {
+  background-color: var(--deep-espresso);
+  color: var(--creamy-white);
+  padding: 15px 40px;
+  font-size: 21px;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.2s, box-shadow 0.3s ease-in-out;
+  align-self: center;
+}
+
+.booking-form .book-button:hover {
+  background-color: var(--dusty-green);
+  transform: scale(1.04);
+}
+
+/* BOOKING CONFIRMATION PAGE */
+.confirmation-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 279px);
+  padding: 2rem;
+  text-align: center;
+}
+
+.confirmation-card {
+  background-color: var(--dark-mocha);
+  color: var(--creamy-white);
+  padding: 2rem;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+.checkmark {
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 2rem;
+  background: url('assets/icons/confirm.svg') no-repeat center / contain;
+  filter: invert(1);
+}
+
+.confirmation-card h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  margin-bottom: 1rem;
+}
+
+.confirmation-card .appointment-details h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.confirmation-card p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+}
+
+/* ADOPTION PAGE */
+.adopt {
+  padding: 4rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.adopt h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  color: var(--milk-chocolate);
+  margin-bottom: 2.5rem;
+}
+
+.adopt-container {
+  display: flex;
+  gap: 8rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cat-card {
+  background-color: var(--warm-beige);
+  width: 350px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.cat-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.cat-info {
+  padding: 1.5rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.cat-info h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--deep-espresso);
+  margin-bottom: 0.5rem;
+  text-transform: lowercase;
+}
+
+.cat-meta {
+  font-size: 16px;
+  color: var(--deep-espresso);
+  margin-bottom: 1rem;
+}
+
+.cat-description {
+  font-size: 16px;
+  line-height: 1.4;
+  color: var(--deep-espresso);
+  margin-bottom: 1rem;
+}
+
+.adopt-button {
+  background-color: var(--deep-espresso);
+  color: white;
+  padding: 10px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.2s;
+}
+
+.adopt-button:hover {
+  background-color: var(--dusty-green);
+  transform: scale(1.04);
+}
+
+/* LOCATION PAGE */
+.location {
+  padding: 4rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: 60vh;
+}
+
+.location-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.location-address h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  color: var(--milk-chocolate);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.location-address p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 26px;
+  line-height: 1.5;
+  color: var(--deep-espresso);
+  text-align: center;
+}
+
+.location-map {
+  width: 60%;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.location-map iframe {
+  display: block;
+  width: 100%;
+  height: 750px;
+  border: none;
 }

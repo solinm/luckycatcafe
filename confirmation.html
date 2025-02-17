@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
+    <title>Booking Confirmation</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -19,22 +19,19 @@
       </nav>
     </header>
 
-    <section class="hero">
-      <div class="hero-content">
-        <h1>Paws in for a Lucky Treat!</h1>
-        <a href="book.html" class="book-button">book visit</a>
-      </div>
-    </section>
+    <section class="confirmation-wrapper">
+      <div class="confirmation-card">
+        <div class="checkmark"></div>
+        <h1>Your appointment has been successfully booked!</h1>
+        <p>We look forward to seeing you soon at Lucky Cat Café.</p>
 
-    <section class="description">
-      <h2>THE CAT CAFÉ FROM OTTAWA</h2>
-      <p>
-        Escape the city’s bustle and step into a cozy haven where friendly felines and freshly
-        brewed coffee come together in perfect harmony. At Lucky Cat Café, our adoptable cats roam
-        freely, offering gentle purrs as you savor a latte or sweet pastry. It’s an inviting space
-        designed for both humans and whiskered companions to share warmth, comfort, and perhaps the
-        promise of a forever home.
-      </p>
+        <div class="appointment-details">
+          <h2>Appointment Details</h2>
+          <p><strong>Date:</strong> <span id="conf-date"></span></p>
+          <p><strong>Email:</strong> <span id="conf-email"></span></p>
+          <p><strong>Number of People:</strong> <span id="conf-people"></span></p>
+        </div>
+      </div>
     </section>
 
     <footer class="footer">
@@ -59,5 +56,16 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const bookingDate = params.get('bookingDate') || 'N/A';
+      const bookingEmail = params.get('bookingEmail') || 'N/A';
+      const bookingPeople = params.get('bookingPeople') || '1';
+
+      document.getElementById('conf-date').textContent = bookingDate;
+      document.getElementById('conf-email').textContent = bookingEmail;
+      document.getElementById('conf-people').textContent = bookingPeople;
+    </script>
   </body>
 </html>

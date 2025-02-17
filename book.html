@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Your Visit</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">lucky cat café</div>
+      <nav class="nav-links">
+        <a href="index.html">home</a>
+        <a href="about.html">about</a>
+        <a href="book.html">book</a>
+        <a href="adopt.html">adopt</a>
+        <a href="volunteer.html">volunteer</a>
+        <a href="location.html">location</a>
+      </nav>
+    </header>
+
+    <section class="book">
+      <div class="book-container">
+        <div class="rules">
+          <h1>café rules</h1>
+          <p>
+            To ensure a safe and comfortable experience for our guests—both human and feline—we
+            kindly ask that you follow these guidelines:
+          </p>
+          <p>
+            <strong>1. No Outside Pets</strong><br />
+            Please refrain from bringing any other animals into the café. Our resident cats are
+            accustomed to their environment and each other.
+          </p>
+          <p>
+            <strong>2. Approach Gently</strong><br />
+            Allow the cats to come to you. Do not chase or pick them up without guidance from staff.
+          </p>
+          <p>
+            <strong>3. Mind Their Privacy</strong><br />
+            If a cat is sleeping or resting, avoid disturbing them. Cats need personal space and
+            rest time.
+          </p>
+          <p>
+            <strong>4. No Flash Photography</strong><br />
+            Bright lights can startle our cats. Feel free to take photos, but please turn off the
+            flash and keep noise to a minimum.
+          </p>
+          <p>
+            <strong>5. Keep Human Food to Yourself</strong><br />
+            Our cats follow a special diet; do not feed them from your plate or drinks. They have
+            their own treats provided by staff.
+          </p>
+          <p>
+            <strong>6. Sanitize Hands</strong><br />
+            Use the provided sanitizer before interacting with the cats. This helps maintain a
+            clean, healthy environment.
+          </p>
+          <p>
+            <strong>7. Gentle Voices, Calm Atmosphere</strong><br />
+            Loud noises or sudden movements can stress our cats, so please speak softly and move
+            mindfully.
+          </p>
+          <p>
+            <strong>8. Supervise Children</strong><br />
+            Children are welcome but must be closely supervised by an adult at all times to ensure
+            respectful, safe interactions with the cats.
+          </p>
+          <p>
+            By following these rules, you help us protect the well-being of our beloved feline
+            residents—and create a peaceful, enjoyable setting for everyone. Thank you for your
+            cooperation and understanding!
+          </p>
+        </div>
+
+        <div class="booking-side">
+          <form id="bookingForm" class="booking-form">
+            <label for="bookingDate">select date:</label><br />
+            <input type="date" id="bookingDate" name="bookingDate" required />
+
+            <br /><br />
+            <label for="booking-email">booking email:</label><br />
+            <input
+              type="email"
+              id="booking-email"
+              name="booking-email"
+              placeholder="yourname@email.com"
+              required
+            />
+
+            <br /><br />
+            <label for="num-people">number of people:</label><br />
+            <input
+              type="number"
+              id="num-people"
+              name="num-people"
+              min="1"
+              max="10"
+              value="1"
+              required
+            />
+
+            <br /><br />
+            <button type="submit" class="book-button">complete booking</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-left">
+          <div class="footer-section">
+            <h3>address</h3>
+            <p>Lucky Cat Café<br />123 Purr Street<br />Ottawa, ON K1A 0B1</p>
+          </div>
+          <div class="footer-section">
+            <h3>contact</h3>
+            <p>meow@luckycatcafe.ca<br />(613) 123-4567</p>
+          </div>
+          <div class="footer-section">
+            <h3>hours</h3>
+            <p>Mon-Fri 8AM - 7PM<br />Sat-Sun 9AM - 5PM</p>
+          </div>
+        </div>
+        <div class="footer-socials">
+          <a href="#"><img src="assets/icons/ig.svg" alt="Instagram" /></a>
+          <a href="#"><img src="assets/icons/fb.svg" alt="Facebook" /></a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('bookingForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const date = document.getElementById('bookingDate').value;
+        const email = document.getElementById('booking-email').value;
+        const people = document.getElementById('num-people').value;
+
+        const params = new URLSearchParams({
+          bookingDate: date,
+          bookingEmail: email,
+          bookingPeople: people,
+        });
+
+        window.location.href = `confirmation.html?${params.toString()}`;
+      });
+    </script>
+  </body>
+</html>
