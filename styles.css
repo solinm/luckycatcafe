@@ -1,8 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@400;700&display=swap');
 
-* {
+html,
+body {
   margin: 0;
   padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+* {
   box-sizing: border-box;
 }
 
@@ -16,12 +22,13 @@
   --dusty-green: #a7c5ab;
 }
 
+/* GLOBAL STYLES */
 /* navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 1rem 3rem;
   background-color: var(--creamy-white);
 }
 
@@ -47,33 +54,12 @@
   color: var(--milk-chocolate);
 }
 
-/* hero */
-.hero {
-  background: url('assets/images/hero.jpg') no-repeat center center/cover;
-  height: 715px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-  flex-direction: column;
-  padding-top: 10px;
-  width: 100%;
-  position: relative;
-}
-
-.hero-content h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 48px;
-  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-}
-
 .book-button {
   background-color: var(--deep-espresso);
   color: var(--creamy-white);
-  padding: 15px 65px;
+  padding: 10px 55px;
   font-family: 'Montserrat', sans-serif;
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 600;
   border: none;
   border-radius: 4px;
@@ -87,49 +73,26 @@
   transform: scale(1.04);
 }
 
-/* intro */
-.description {
-  padding: 3rem;
-  max-width: 900px;
-  margin: 3rem auto;
-  text-align: center;
-}
-
-.description h2 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 26px;
-  color: var(--milk-chocolate);
-  margin-bottom: 1rem;
-}
-
-.description p {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 24px;
-  line-height: 1.5;
-  color: var(--deep-espresso);
-}
-
 /* footer */
 .footer {
   background-color: var(--dark-mocha);
   color: white;
-  padding: 1rem;
+  margin-top: 2rem;
+  padding: 1rem 0;
 }
 
 .footer-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 2000px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 1rem;
 }
 
 .footer-left {
   display: flex;
   gap: 2rem;
   flex: 1;
-  justify-content: flex-start;
 }
 
 .footer-section {
@@ -166,4 +129,93 @@
 
 .footer-socials a img:hover {
   transform: scale(1.1);
+}
+
+/* HOME PAGE */
+/* hero */
+.hero {
+  background: url('assets/images/hero.jpg') no-repeat center center/cover;
+  height: 715px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  margin: 0;
+}
+
+/* intro */
+.description {
+  padding: 3rem 2rem;
+  max-width: 900px;
+  margin: 3rem auto;
+  text-align: center;
+}
+
+.description h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 26px;
+  color: var(--milk-chocolate);
+  margin-bottom: 1rem;
+}
+
+.description p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  line-height: 1.5;
+  color: var(--deep-espresso);
+  margin-bottom: 1.5rem;
+}
+
+/* ABOUT PAGE */
+.about {
+  padding: 4rem 2rem;
+  text-align: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.about h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  color: var(--milk-chocolate);
+  margin-bottom: 1rem;
+  width: 150%;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.about-container img {
+  width: 50%;
+  border-radius: 2px;
+}
+
+.about-text {
+  width: 50%;
+  text-align: center;
+}
+
+.about-text p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 19px;
+  color: var(--deep-espresso);
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.about .book-button {
+  margin: 2rem auto 0;
+  display: block;
 }
